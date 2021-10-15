@@ -1,5 +1,3 @@
-# I think I'm a kinesthetic learner, I learned a lot from your mom last night
-
 def factorial(x):
     result = 1
     i = x
