@@ -21,28 +21,28 @@ def status():
 count = 1
 while count > 0:
     first_move = input("player 1's move: ").upper()
-    if first_move == 'A':
+    if first_move == "A":
         combination_a = input("Enter the combination: ")
         combination_1 = combination_a.upper()
-        if combination_1 == 'LR':
+        if combination_1 == "LR":
             Righthand_player2 = Righthand_player2 + Lefthand_player1
             if Righthand_player2 >= 5:
                 Righthand_player2 = 0
-        elif combination_1 == 'RL':
+        elif combination_1 == "RL":
             Lefthand_player2 = Lefthand_player2 + Righthand_player1
             if Lefthand_player2 >= 5:
                 Lefthand_player2 = 0
-        elif combination_1 == 'LL':
+        elif combination_1 == "LL":
             Lefthand_player2 = Lefthand_player2 + Lefthand_player1
             if Lefthand_player2 >= 5:
                 Lefthand_player2 = 0
-        elif combination_1 == 'RR':
+        elif combination_1 == "RR":
             Righthand_player2 = Righthand_player2 + Righthand_player1
             if Righthand_player2 >= 5:
                 Righthand_player2 = 0
         else:
             error()
-    elif first_move == 'S':
+    elif first_move == "S":
         z, a, b = input("Enter your combination:").split()
         a = int(a)
         b = int(b)
@@ -51,7 +51,9 @@ while count > 0:
     else:
         error()
     status()
-    if (Lefthand_player1 == 0 and Righthand_player1 == 0) or (Lefthand_player2 == 0 and Righthand_player2 == 0):
+    if (Lefthand_player1 == 0 and Righthand_player1 == 0) or (
+        Lefthand_player2 == 0 and Righthand_player2 == 0
+    ):
         count = 0
         if Lefthand_player1 == 0 and Righthand_player1 == 0:
             print("Player2 has won!")
@@ -60,28 +62,28 @@ while count > 0:
         break
 
     second_move = input("player 2's move: ").upper()
-    if second_move == 'A':
+    if second_move == "A":
         combination_b = input("Enter the combination: ")
         combination_2 = combination_b.upper()
-        if combination_2 == 'LR':
+        if combination_2 == "LR":
             Righthand_player1 = Righthand_player1 + Lefthand_player2
             if Righthand_player1 >= 5:
                 Righthand_player1 = 0
-        elif combination_2 == 'RL':
+        elif combination_2 == "RL":
             Lefthand_player1 = Lefthand_player1 + Righthand_player2
             if Lefthand_player1 >= 5:
                 Lefthand_player1 = 0
-        elif combination_2 == 'LL':
+        elif combination_2 == "LL":
             Lefthand_player1 = Lefthand_player1 + Lefthand_player2
             if Lefthand_player1 >= 5:
                 Lefthand_player1 = 0
-        elif combination_2 == 'RR':
+        elif combination_2 == "RR":
             Righthand_player1 = Righthand_player1 + Righthand_player2
             if Righthand_player1 >= 5:
                 Righthand_player1 = 0
         else:
             error()
-    elif second_move == 'S':
+    elif second_move == "S":
         z, a, b = input("Enter your combination:").split()
         a = int(a)
         b = int(b)
@@ -90,7 +92,9 @@ while count > 0:
     else:
         error()
     status()
-    if (Lefthand_player1 == 0 and Righthand_player1 == 0) or (Lefthand_player2 == 0 and Righthand_player2 == 0):
+    if (Lefthand_player1 == 0 and Righthand_player1 == 0) or (
+        Lefthand_player2 == 0 and Righthand_player2 == 0
+    ):
         count = 0
         if Lefthand_player1 == 0 and Righthand_player1 == 0:
             print("Player2 has won!")
