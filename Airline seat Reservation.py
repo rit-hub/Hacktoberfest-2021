@@ -3,12 +3,12 @@
 # Airline Seat Reservation
 
 
-Reservation = { }
+Reservation = {}
 choice = None
 while choice != "3":
 
     print(
-    """ 
+        """ 
                 Welcome to Mt.Everest Airline!
 
                         1 - Reserve seat
@@ -26,50 +26,61 @@ while choice != "3":
 
     # Reserve seat
     elif choice == "1":
-        
+
         row = int(input("Enter a Row(1-25):"))
-        while row <1 or row >25:
+        while row < 1 or row > 25:
             print("\nInvalid Row! please enter between 1 and 25.\n")
             row = int(input("Enter a Row(1-25):"))
-           
+
         column = input("\nEnter a Coulmn(A-D):")
-        while column == int() or  column >"d":
+        while column == int() or column > "d":
             print("\nInvalid Column! please enter between A and D.\n")
             column = input("\nEnter a Coulmn(A-D):")
-        seat =str(row)+column
+        seat = str(row) + column
         if seat not in Reservation:
             name = input("\nEnter your full name:")
             Reservation[seat] = name
-            print("\nSeat",seat.upper(),"has been successfully reserved for",name.capitalize(),".")
+            print(
+                "\nSeat",
+                seat.upper(),
+                "has been successfully reserved for",
+                name.capitalize(),
+                ".",
+            )
         else:
-            print("\nSorry!,Seat",seat.upper(),"already reserved for",Reservation[seat].capitalize(),".")
-        
-    
-    # Canceled Reservation 
+            print(
+                "\nSorry!,Seat",
+                seat.upper(),
+                "already reserved for",
+                Reservation[seat].capitalize(),
+                ".",
+            )
+
+    # Canceled Reservation
     elif choice == "2":
         seat = input("Enter seat number :")
         cancel = "y"
         cancel = "n"
         if seat in Reservation:
-            cancel = input("\nCancel reservation for " + Reservation[seat].capitalize() +"(y/n)?:")
+            cancel = input(
+                "\nCancel reservation for " + Reservation[seat].capitalize() + "(y/n)?:"
+            )
             if cancel == "y":
-                print("\nSeat",seat.upper(),"reservation for",Reservation[seat].capitalize(),"has been successfully canceled.")
+                print(
+                    "\nSeat",
+                    seat.upper(),
+                    "reservation for",
+                    Reservation[seat].capitalize(),
+                    "has been successfully canceled.",
+                )
                 del Reservation[seat]
             if cancel == "n":
-                 print("\nsorry! Invalid entery.")
+                print("\nsorry! Invalid entery.")
         else:
-            print("\nSorry! There is no reservation for seat",seat.upper(),".")
-
+            print("\nSorry! There is no reservation for seat", seat.upper(), ".")
 
     else:
         print("\nSorry!!! Invalid choice.")
 
 
-input("Press enter key to exit.")        
-            
-
-  
-    
-    
-    
-          
+input("Press enter key to exit.")
