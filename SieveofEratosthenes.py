@@ -1,4 +1,4 @@
-# Fast Algorithm to generate prime numbers in log(n), Sieve of Eratosthenes
+# Sieve of Eratosthenes, a fast Algorithm to generate prime numbers in log(n)
 
 
 def SieveOfEratosthenes(n):
